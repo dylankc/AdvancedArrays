@@ -13,9 +13,15 @@ console.log(removeEWords('Enter the building')); // 'building'
 */
 
 let removeEWords = function(sentence) {
-    // Your code here 
+  let split = sentence.split(' ');
+  let words = split.filter(function(str){
+    return !str.includes('e');
+  })
+  return words.join(' ');
 };
 
+console.log(removeEWords('What time is it everyone?')); // 'What is it'
+console.log(removeEWords('Enter the building')); // 'building'
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
