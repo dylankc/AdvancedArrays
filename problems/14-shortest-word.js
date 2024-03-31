@@ -15,11 +15,22 @@ console.log(shortestWord('do what you enjoy'));         // 'do'
 */
 
 let shortestWord = function(sentence) {
-  // Your code here 
+  let words = sentence.split(' ');
+  console.log(words);
+  let shortest = [];
+  console.log(shortest);
+  words.forEach(word => {
+    if(word.length <= shortest.length) {
+      shortest.push(word)
+    }
+  })
+  return shortest;
 };
 
-// Your code here 
 
+console.log(shortestWord('what a wonderful life'));     // 'a'
+// console.log(shortestWord('the quick brown fox jumps')); // 'fox'
+// console.log(shortestWord('do what you enjoy'));         // 'do'
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
