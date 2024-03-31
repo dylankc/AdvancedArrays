@@ -34,9 +34,24 @@ let repeatingTranslate = function(sentence) {
 
 
 let translateWord = function(word) {
-    // Your code here 
-};
+    vowels = "AEIOUaeiou";
+    if(word.length < 3) {
+        console.log(word);
+        return word;
+    }
 
+    for(let i = word.length -1; i >= 0; i--) {
+        let letter = word[i];
+        if(vowels.includes(letter)) {
+            return word + word;
+        }
+    }
+};
+console.log(translateWord("fast"));
+// console.log(repeatingTranslate("we like to go running fast"));  // "we likelike to go runninging fastast"
+// console.log(repeatingTranslate("he cannot find the trash"));    // "he cannotot findind thethe trashash"
+// console.log(repeatingTranslate("pasta is my favorite dish"));   // "pastapasta is my favoritefavorite dishish"
+// console.log(repeatingTranslate("her family flew to France"));   // "herer familyily flewew to FranceFrance"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

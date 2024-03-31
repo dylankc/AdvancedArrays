@@ -19,7 +19,7 @@ let removeLastVowel = function(word) {
     for(let i = word.length -1; i >= 0; i--) {
         let letter = word[i];
             if(vowels.includes(letter.toLowerCase())) {
-                return word.split(letter).join('')
+                return word.slice(0, i) + word.slice(i + 1);
             }
     }
     return word;
@@ -35,8 +35,8 @@ let hipsterfy = function(sentence) {
 // };
 
 console.log(hipsterfy('When should everyone wake up?')); // 'Whn shold everyon wak p?'
-// console.log(hipsterfy('get ready for our bootcamp')); // 'gt redy fr or bootcmp'
-// console.log(hipsterfy('panthers are great animals')); // 'panthrs ar gret animls'
+console.log(hipsterfy('get ready for our bootcamp')); // 'gt redy fr or bootcmp'
+console.log(hipsterfy('panthers are great animals')); // 'panthrs ar gret animls'
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
