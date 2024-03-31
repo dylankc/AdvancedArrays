@@ -24,7 +24,15 @@ let removeLastVowel = function(word) {
     }
     return word;
 };
+// let hipsterfy = function(sentence) {
+//     let newWord = [];
+//     let splitSentence = sentence.split(' ');
 
+//     splitSentence.forEach(word, index => {
+//         newWord.push(removeLastVowel(index));
+//     })
+//     return newWord.join(' ');
+// }
 let hipsterfy = function(sentence) {
     return sentence.split(' ').map(removeLastVowel).join(' ')
 };
